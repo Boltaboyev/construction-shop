@@ -1,0 +1,302 @@
+[
+    {
+        "id": "1",
+        "img": "https://s3-alpha-sig.figma.com/img/a5b0/d181/c5c7cca2305acf97ff6ea2842422a5f0?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=paH~0vCMR9avu1YGJ2FvC~lav8GvbdSLP~8QsX~2Rrpg79-9vIRm-1kjYkzP6pO09GYUdMrVTu2tEkc8vtRiDegwmwSNf0CgOFgtB5AAfV8lxa5Gvc2aAi3du0FnJiO0I6DuqcNxgz8Ito7wXbagP0lwUjRsGMaJTc3spmSXyLnGcuFmr04dtNEzsK5Z8pYZH5bkYKKlHlRTnszB5-s4E3rZXu3E59fxxlwelUP-2Edio7RBw3-PdSQFQSfUdpF3fS9SES3m2~5Q0lik~-IiXPMGdUqtJuTSecDUh7heD35FqazJjIR8LARTpCzfuhB5wPBjhzek6OqRHUDq9VFyQQ__",
+        "title": "Перфоратор Wander X645-46",
+        "oldPrice": 12000,
+        "price": 12789,
+        "discount": 12,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "2",
+        "img": "https://s3-alpha-sig.figma.com/img/6c1b/3d7a/a473a90bf7c96c0c2c38335983d9d7db?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=jB9nXh1rAug6HsyGB-og82SPpbJhhKRqfkpApxa9ZtGZkf6lzuDb2OjgMzurX8wiibOoDvIwsJqgQeOgcKbxGn4agpPQSFC6i-lGeRShHNLhvW9M7GeZWlAsFyafbLTuJhllFhZnDW7YNLyk6urkqE0fjp4p6tdcXZJ6Eapiz73PdZ7XmV3Gt2z0PFU9H9g1Bvk3XwexP5nY-65PDocmBXlxBP0szd3nAw9Krj-T3EnP-z2STQsWNnuyWuYdl9YhSuXk9SptBiOqJ54XcW9rPLKUvXbl9mFZzniOFiin0FjGH5GY3ftOyWUMT1JvntOz0fCfxY4kxwmYoYAFfeOMrA__",
+        "title": "Смеситель Faris G-120",
+        "oldPrice": 12000,
+        "price": 1789,
+        "discount": 15,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "3",
+        "img": "https://s3-alpha-sig.figma.com/img/03be/7a3c/3afe609d97e9664f075d8939df31a69d?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=R~-vrlwOXU45HSP-cai24hUjdK8y8GC5JGyod14ztpl398lzy1xbAICrk3~ftmVO~cFZvBsaG7VtNtuSCIjLN6YbBEt6lSLntK9OeOP~BMFDmas8MFfGxtGRVF~pULFS0c6VgZg9qZuhHI2r4IQdAfhbd-bDlasHSomrAPhybtDmCLZa6ws2RfjbWTDchGPlCL1zmRPrif9BX7hhZBN~maDQP9oIy-6IowB4hThvbsLCLtYwKx3av8bXfIQzITb3OxjaUKLQ5A3~saOfBOrtRU62fhq5fiNIt6ToWB-ob19rZYXO0H6F5NA4X~oAofvfFaMbs4rS3juDdtMSLNhm~w__",
+        "title": "Триммерная леска",
+        "oldPrice": 14000,
+        "price": 12260,
+        "discount": 10,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "4",
+        "img": "https://s3-alpha-sig.figma.com/img/37c1/2b03/b6e09954376355c5f17c9993f7c56537?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iSprHlOy9Z9ZkWJ5kCOUYi6F-R1VoFfZfXKKrHJmVfOSPQJtNhEk4cpf-bU7S~UN~neMeYFSeqe0tRFjRpgb1EsQaSeprQSWYUP4nf8YE721cp5Vcb4QRdapHCQ69b47f1bc9bXIRIxZEWx16XfbYMg~gzXchl4CbLdn8taeC6YKqQusHw8JLk7GVVYTDwSJew9WQ35bx1gg5m2NWHn1af3c7Ar0-xSGqpP6CbXL-tbraXr5d0z1g~qUmzZc~euOA9JxhwS2DCH-le9u7IoLuY1P4EfBQdwHo6ev9ha3-RNTdTpUOkQAze7Xg6aOzQZ7amYvZS0BBtRU14G5QpoMzg__",
+        "title": "Шлифмашина Makita 720W",
+        "oldPrice": 12009,
+        "price": 10000,
+        "discount": 72,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "5",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Шлифмашина Makita 720W",
+        "oldPrice": 12009,
+        "price": 10000,
+        "discount": 72,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "6",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Шлифмашина Makita 720W",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "7",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Смеситель Faris G-120",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "8",
+        "img": "https://s3-alpha-sig.figma.com/img/3853/d34c/96176220c2b1b9a82a70c83b5b9ea947?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q5XDk2Qj10hLON~NQ59QCc7GOo7HHMhi4nnylftpIXTa0V2jhwhURAV~hVBj0qpXygYBj0Tl8POLRYqLSb4cqDMBD3POJ2ysB~gfcD-q0UUXMKiFH0S8fjNXtXRDpaVIvqd2~mdnHsNBLMGCQgaeR5kMuFahFSylVAYJfo9HhfDHkavHc3w2aOstP6aRqRbIs2qYFkXdYWi5NG8nw9daKveGacWNSGfgW1nUv9BEozCB9WYGwkJnLI3DBrXCXUKOZJaJKaipya5meKEDlU-dp-WU7Ioh1qoX1RRdxu4HZPsFHVTUCLN5keKe6nVzAhMb5B8ErawDWHZElI36JZxKkg__",
+        "title": "Унитаз Aragio",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "9",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Смеситель Faris G-120",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "10",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Шлифмашина Makita 720W",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "11",
+        "img": "https://s3-alpha-sig.figma.com/img/3853/d34c/96176220c2b1b9a82a70c83b5b9ea947?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q5XDk2Qj10hLON~NQ59QCc7GOo7HHMhi4nnylftpIXTa0V2jhwhURAV~hVBj0qpXygYBj0Tl8POLRYqLSb4cqDMBD3POJ2ysB~gfcD-q0UUXMKiFH0S8fjNXtXRDpaVIvqd2~mdnHsNBLMGCQgaeR5kMuFahFSylVAYJfo9HhfDHkavHc3w2aOstP6aRqRbIs2qYFkXdYWi5NG8nw9daKveGacWNSGfgW1nUv9BEozCB9WYGwkJnLI3DBrXCXUKOZJaJKaipya5meKEDlU-dp-WU7Ioh1qoX1RRdxu4HZPsFHVTUCLN5keKe6nVzAhMb5B8ErawDWHZElI36JZxKkg__",
+        "title": "Унитаз Aragio",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "12",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Шлифмашина Makita 720W",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "13",
+        "img": "https://s3-alpha-sig.figma.com/img/a8f0/34e8/98722f197bb4c98ea5312af143067a58?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ISkMeYGSrkyXvUH~BGLCPWcRIkZtNOXA637vMY2bKpw-9V7bgLn8aoDFeh-BuIDZUIraukY2jHBU2bqa48h00C2YMCs6b6UicB6G0Z5AeA--WRIVqGWrjsGYg4K1rnY58Pxg0Otz0Nlx1tc-QXI3s~NHkKRdkQYTWCLJsYB9cXf44IYkLCqRm5AVXIK6fWmTFxfkACl1cvayRsDxhO1WWjlgTh2kC4Hiql8ghPcv03Fr1TxFQtsNJuAnlQVyUBZggyV0jqAJ5ewtvfp0vItAzdeE4EhXXfs-f4Sd8LFjObeCkOZZRpxksZj8wX62JR4SuTVDPtpot27E5McLM~p1hg__",
+        "title": "Набор Nozzle-Tok",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "14",
+        "img": "https://s3-alpha-sig.figma.com/img/abf6/3149/f4188f6e9a6b60479bc5300f4ad94217?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=V00tx5gXWOnjf8EaTBmJcJQQiNBFr1K0U2ZqNeMkfaVOoYTkdVow~lVoZJfLHHRZ23L87vlEvSuiJmsm8fJ7CDPTi96i7QUwj1Q9DsbByhfKnBU8~k0WaKqZvoI9N3klZu~sXdIDKWjpooaFsDhZ30TVVqgdxiEdUk8FuyeSY3DVKFYHG2tlZlqMw4HNUeGY1-ZrIOnBOKVvAkiDB9z4ngch6FqD9tSVxMZQz6d1EFiUpqkIIL55yLHojiOxOwjeTbTdYKvhCeLZfHteAeNDwsJd4j4sCv0xWyfZnwH~BPuTCc60RfTAzncbZ0v-Ck2KmRR04s~1z~LfCSvQllNepw__",
+        "title": "Перфоратор Wander X645-46",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "15",
+        "img": "https://s3-alpha-sig.figma.com/img/2680/e246/df747d84827edd41c600dd50a4fa972a?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BXk20jkNmDqzdR4qKoem89koAEhfjsgARqqylZ4ODFRUBAG41GQ2tF-Tgg8vUp2rC3WzhMjM~HbyTzp-Sx4p1NijfpawryAkiiITxDE2jRIxt04vWyfTGBnFPOuhupvQRR-uJzZSN5MviDOF27jTFrMmsF0stkvrJ5ZNCWnF95-LkGPo9ksmTXOW0VxfgWDEMD0b0tNCbkHjcGqppdsZ4nv2VfZm4HgMeKSxGGlt5kjTTMym4iifkPHf1JVAHWdLJEnJXFSVt8HU9u5t0MPu2jq7wM4XEBC4y-dki6ubNkNCgRwBDj~vCjBU3R3unjmV-uKGwADKEajqYH3pfQg72Q__",
+        "title": "Смеситель Faris G-130",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "16",
+        "img": "https://s3-alpha-sig.figma.com/img/9653/3c33/486b578fadfa1c88a0e5a2f4723d1e38?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=mBktL0lvQj-MY~GEPXZNSxnTSpZ6RhXcFYG47e2cAsUOUQJMozLELCfUJC5NzhpbUP~xBEhYG3ie5fpKifNjqbZtbGkQFU-ykNsdOOnS1EkqxhVZvIYkDaV1YgMsS1OBXLusPr2d6dq2BXnSbPJZySZIWh7RrVupfkHEhzCiYqZgYA72-JPxbmhb0Kp8bcCYgoTzdITJAxurvlUr3rB5Dx6XM0U~1SD9rEgLjE5LPp40uyIIHO~m7LgsjHPJJ5gfZFRB-VmNX~w0L0UCkTaE541qSdKFYzbteZbb1LXvaqTwYeijRXgWU6GJLV1v~hHRHkXYVty~hZt23WEvzof8Qw__",
+        "title": "Триммерная леска",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "17",
+        "img": "https://s3-alpha-sig.figma.com/img/3853/d34c/96176220c2b1b9a82a70c83b5b9ea947?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q5XDk2Qj10hLON~NQ59QCc7GOo7HHMhi4nnylftpIXTa0V2jhwhURAV~hVBj0qpXygYBj0Tl8POLRYqLSb4cqDMBD3POJ2ysB~gfcD-q0UUXMKiFH0S8fjNXtXRDpaVIvqd2~mdnHsNBLMGCQgaeR5kMuFahFSylVAYJfo9HhfDHkavHc3w2aOstP6aRqRbIs2qYFkXdYWi5NG8nw9daKveGacWNSGfgW1nUv9BEozCB9WYGwkJnLI3DBrXCXUKOZJaJKaipya5meKEDlU-dp-WU7Ioh1qoX1RRdxu4HZPsFHVTUCLN5keKe6nVzAhMb5B8ErawDWHZElI36JZxKkg__",
+        "title": "Унитаз Aragio",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "18",
+        "img": "https://s3-alpha-sig.figma.com/img/271a/2df9/7800d164515eeeb06d394bd7638cce2f?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bxD2rC5dtGAVXjirVM4FDsCBXcborNm-D8a5uHn~m47LNLpQtEiqNFFvcmvVUfnF4JO3GSrkxZjMQA1Qb2GMUd0B77PaXcwJBGcgbhwSuo5vcApqKBkNdDrxrW75vFMhZnYpYir~kwxNjTTyUoUI17u-FfMpi78wxh5Z-YzaWV1GIk-CGjzDpPjObZXx3Uz4Ww9zWgatgE~mjVX8v3BaQnmFMGXOV~BMbdYp4M1yvBwVhibpMdrsadnAHR0g8X-1cmnqGj8mGa02ZU6r-XxFpraqr~AIAAzyn83xMThYuVFnFl-ULPDmp6UYWH5P3-v2j2MzRpqY8sQ-LTaUOdmdgw__",
+        "title": "Набор Nozzle-Tok",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "19",
+        "img": "https://s3-alpha-sig.figma.com/img/32b0/5164/3149b43ea219c3737f9a58c249cee12d?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CL27gDybv0gKNENBnxnECq~MJ2HCpkObF1GJWmwy5QQPs5ejdTDBVEvPuZtTUwQHEETtLTUDE~C1qeVEJZl1hL10doGRj469NNZwocVY6YUbemGbDDwuIawivarLbhbjOMRSGtCBMbmwu-c-DoFocdea-AxOrGrMpQMXWKWFbqoABG54tTn-L5afWF2jopHB2JtZfmyp5ovtpUMxtYIGI0Nc1Axjy45gkfQkWXJzvOnVX6kO4sUa0f5jbXfiguFfoPG6OELzRQ7u~MEALXQjXL4eZvZ~FTw67l8ZPY2GKGYOIc6oABhEiSR-zzHthIFfl8DjFSCS924QYWE4aOJq-w__",
+        "title": "Перфоратор Wander X645-46",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "20",
+        "img": "https://s3-alpha-sig.figma.com/img/7c0c/fe31/de6bccade5b11f2d8de67643c5d3bb54?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hR5HOwTa82FIIos2j2D27ZpF~s7Rfrl7fZ5ful5ADE~Vs7ZY6yXOKxug3VZMlk5zztMZqb6eofojc-YYBtFB7YWaTdAm7~DTviIhEmCTtoavfhN66e8p5zkvzV6PNYAn2AHrxArQrbvkjOk2aAap7Tu9nIWtW78Vp7kFm08Abegpacp5RYGOhmK0n94eVKl~C55Bn1W6CvgqcboSCb~nRHUJgHRWPGIQVJCk7b7gyCbrtOuhOv8fFF-JKe7tCHHtiBY8mhSRjIpW-0nxOiE~kanjFTPgncnFijyY6~oTuTeFBPducB~9aZ0TmftxcFJwc22BpdyrUheV1NnceDBPcA__",
+        "title": "Смеситель Faris G-120",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "21",
+        "img": "https://s3-alpha-sig.figma.com/img/1cbd/51b2/7e1888237bfb92583a97fa6cd94b3e83?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=nS3aRQ7MR-d0BZw~loV6mtVXAhjJaU1MpUPjJuyJORHMwF5YmVXeqmoemWxXWpOaN-AYmqgBkaqL-DDZMrm7MfOh34SntanV5DiAYCmoV-FTDQ4UhpnxVT70bf~wc-JKxvFPwoolOA5SYTQWgC4dxECWIJ3fCoU9G~~DC1c4~xbulgkR~yR~58d8ckUaIcDkoMaZULygl2MAT6U46wLcuRPzRYnfsoKjw8xRTaPOtbTnKQ4qaoQb633G1zpx6XjNumoAAtYa8mAQnuWG1mTjNbTQefHa2-9swjWrn7fhOmwQoYhW4yhXTsEllohSg0kEFkvPqPy-f4o1Qt3ERYXeTA__",
+        "title": "Триммерная леска",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "распродажа",
+        "category": "Инструменты"
+    },
+    {
+        "id": "22",
+        "img": "https://s3-alpha-sig.figma.com/img/5c91/ee82/1e73ba5f5afecfc2f9f1cad8f9114c6d?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=eakzt6lJSeG12VXbKEH5oTfHtPzZkLZ89yiSOioJBTIjVbaCcFIWhm15n7p6PEpGctf5GHZvccslf7eqiDfAb7nh5WW4JDGNq1HFk9OjcvxM1N6xXYwNdi68uAMeMhvkmN~bM6UfTjmxnPMa~Ry9GW5d4YhA5iZ0-LEqAP4Jc8m195cdACcO3Rg4zPuuTCo-z64PEGp6w9HF7IjrlyxZfOTbvNxd92J7DIitUUacFBn7FGTYh9xf-W7EQcW-ZewEi0aaLlSo3DCWFSjLRZUbEi2Dn00jP6Pf4qTml1jJ3ji-rc9Zbv237w-u~YqlMWpjRnWnaPML5ApSHl6HvWBaCQ__",
+        "title": "Унитаз Aragio",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "23",
+        "img": "https://s3-alpha-sig.figma.com/img/4652/0840/85569b069f133975f45db817421d8f2a?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Z5SqrKXzUfH8FDhNN4U1LADRg9h99Cv4VqK4VRuNr144jXoT7ikN04bZZYz~E7w9~3x-B~nNyLRoaUeiPSgZz9e3nPBX1c6LpvNgPbtRhdF2QO~HsiIJsvGfdrSKQEiG5uoN0csgpk2iuMx3i87TjgsJlHx4PIr~LtdSAI-tGDhi9OOQITutP8zIEuIqKg24B2apaqOcwUoXhoKmG4BEMdpCLhOzKjQUEWP4h81rkAjZq7H3UkPbQLqV6c-AKwHf7BySxr4m2Sl2kKDrfx0A8lSes5bkCS-AyBdwe4QeWdF0CJ3TpoNNsDvwjLad7BTnEVcyB1LIytxcO7kMY-qZ6g__",
+        "title": "Набор Nozzle-Tok",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "24",
+        "img": "https://s3-alpha-sig.figma.com/img/7050/815d/f470762185103442f5e5288f787ad6f5?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=uPBAVzkjFdh1c3hz2gB4SaGmodfTc3FYXsiNpwDHoqmwxsSAnJsQ8Nsm5vJF0mUdMnoTw8jGyISuAJEedIHVlyX~Xjm6damwzGERL5a3O~xo~CwOI~1~ZKN5iAJq1nWgzpi214SG30METUi4Qw~tRCWgEGa0bn8wBGjqFV6luXmKCVPP5SzjfVqUjf8JveQKmYL2tCK5ycbuZtm01fmFIaeKy2TBGfOhsSj2h8yp-Wf-qaW1wj~C3Skb6y1X38i20QqQA8t1EaNipFj7wLP2obnmzoqUZAoRtlWdubWJ~O4w8Hp5dtu6OX33zGylvwa-gExrpsEhYiQRiKucB1d68g__",
+        "title": "Перфоратор Wander X645-46",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "25",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Смеситель Faris G-120",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "26",
+        "img": "https://s3-alpha-sig.figma.com/img/ffc1/0c36/bdb34c604c57edae09708bfbdaaa8045?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=AIu-x9FOEyqwbaxVrOgp9dUsO1wvlC~U-U-SWmkbjGTL96m1A18RefzWxs6jIDoP8vSg27yq1wzltt1gK~YTg4vHMMVNMzATYm9CqJ13S1CsXJGvwZJYh43ekkwMp1pjvqzHUN0A7yEW2Uu2l7AkBQzdgaj4edMSoIhjivRFFAJcokyOMvj0KiwsmzmgfvkI3JxqVt-QkzQcKeVX0THQrtQ1l-5VK5cBBoc67pCc0OXhzVWlpousZI8jcqN05F-splHi9SdTFJhf1tHfJpNPR-LBeNw3~Zico9oBn1JOcXzSao9wVP89jpy3ttteFz6ZAT9gIR3TRZEmnExDcxFvNw__",
+        "title": "Триммерная леска",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "27",
+        "img": "https://s3-alpha-sig.figma.com/img/9ee5/516b/8aec7d6ee4abb0638b9aad2242808d56?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=srwATro86-TetvhqCBM--IWJtWF18-gC5HIlzfyUr5GGhc5vt8meaqXg1C854nrNwkimoT~QRuOkrUmyOizepIN7Vh2jwZ8RmuABosJJY7jIo~RqBoGuKhJ9lwborN702Ooqx6mvF9kaH~dOZq2IXg2W2ablRnLSv~JC~mcemilhv6WcLUhM-p6QphY48zByLYmYMc2NaZh5apyat5BZTdMdmnkRuAUnSw45921LTNDyCnvQ6lQffhOlRp3lZN5LAoCW0~BA3tql54~c1nkZs7uVH7Lbt29jIMqdWDC~LOEIjzyxaM5XYb2UTFwJAXONWf-R4Vy4Ex7OT3VhqWyczQ__",
+        "title": "Унитаз Aragio",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "28",
+        "img": "https://s3-alpha-sig.figma.com/img/3853/d34c/96176220c2b1b9a82a70c83b5b9ea947?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q5XDk2Qj10hLON~NQ59QCc7GOo7HHMhi4nnylftpIXTa0V2jhwhURAV~hVBj0qpXygYBj0Tl8POLRYqLSb4cqDMBD3POJ2ysB~gfcD-q0UUXMKiFH0S8fjNXtXRDpaVIvqd2~mdnHsNBLMGCQgaeR5kMuFahFSylVAYJfo9HhfDHkavHc3w2aOstP6aRqRbIs2qYFkXdYWi5NG8nw9daKveGacWNSGfgW1nUv9BEozCB9WYGwkJnLI3DBrXCXUKOZJaJKaipya5meKEDlU-dp-WU7Ioh1qoX1RRdxu4HZPsFHVTUCLN5keKe6nVzAhMb5B8ErawDWHZElI36JZxKkg__",
+        "title": "Набор Nozzle-Tok",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "29",
+        "img": "https://s3-alpha-sig.figma.com/img/d246/5737/6746b9693b507546470fc249d251552e?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CanmBjvBoV7OrPCLUeIofidgI8egZrgLWEZpsJzcNz-8O2ArnVcBTKn6wpWzrr~BkdcuBr4hihK4QNUhXLp4RhauIOnVNqayJxwiRu8q4BGNI8Xfug0VEcRU2GociSoRmtbF6G3x3Ce2~ABQljzagHLVVMANiGUuHH2aq~gB9h5SKpkYhLfixLxfcku8oJlIkgIu4uaPF3WaWUu~nOBESZae2gJhvA9gyq00MiL3UBHywumTmiwvFgeZSUktBlyXYLEulRs8cw3gltZA25R1c4LJU7Bb3YYH12ztcyYfRVV3pGVQN1OhSrIw~PmCy82imPwW6qch9afQnmvDRnDpWw__",
+        "title": "Дрель Bosch 600W",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    },
+    {
+        "id": "30",
+        "img": "https://s3-alpha-sig.figma.com/img/6eb8/1fda/e06b97cc2a0c0eeb400c0754883c0b22?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JRbIn1Z7ePuOH4wBBv2ubUYphsy8dD~JuKpN1pzcck6Vbl0UKmdHK9LTlznyP9myJWr6Fkirh9SMqaCjw~3ZNUNTtgsKIwyGa4s~CSkCL1j7wPWyiCgHzOLfKcnGs0qZ-lmlWTx5qD8VS8ztFwkqBxqI860TRN641ABL5R4TxfI46HZRx50vRYiKfwSP~1eg1EnHG-QvJGtip8LKxmENClFYLv92QlLUTKXRB3GHIoAqPpwnMzjOc3-I3lPo1p625zrC~U-I2TFtGyt4XzqJSjsDz3frcF8ttLfGvmI6t~VhyEvHPave2AWP3J4xgoHAHDlOrv2Xy~UQdqkYi9AGWw__",
+        "title": "Шлифмашина Makita 720W",
+        "oldPrice": 12000,
+        "price": 9499,
+        "discount": 25,
+        "status": "хит",
+        "category": "Инструменты"
+    }
+]

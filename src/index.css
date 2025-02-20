@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+* {
+    font-family: "Inter", serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #186fd4;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+    transition: none;
+}
+
+button,
+select,
+input {
+    outline: none;
+}
+
+.container2 {
+    width: 96%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+    .container2 {
+        width: 1350px;
+    }
+}
+
+.ownTransition {
+    transition: 0.2s;
+}
+
+.ant-btn {
+    padding: 12px 17.5px !important;
+}
+
+.active * {
+    color: #186fd4 !important;
+    stroke: #186fd4 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border: 3px solid #fff;
+    opacity: 1;
+    background: transparent;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: #007bff;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 94%;
+    color: #2c333d;
+    padding: 40px 0;
+}
+
+@media (max-width: 570px) {
+    .section-title {
+        font-weight: 600;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 360px) {
+    .section-title {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+    }
+}
