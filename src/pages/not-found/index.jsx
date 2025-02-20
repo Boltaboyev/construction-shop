@@ -17,7 +17,8 @@ const NotFoundPage = () => {
 
             <p className="text-sm md:text-base text-[#535557]">
                 Запрашиваемая страница не найдена. Возможно, она была удалена,
-                либо её адрес <br /> был изменён. Попробуйте воспользоваться поиском.
+                либо её адрес <br /> был изменён. Попробуйте воспользоваться
+                поиском.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 w-full max-w-sm pt-[20px]">

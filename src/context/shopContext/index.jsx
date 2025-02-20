@@ -11,33 +11,39 @@ const ShopContextProvider = ({children}) => {
     const reducer = (state, action) => {
         switch (action.type) {
             case "add":
-                if (
-                    state.shop.find((value) => value.id === action.product.id)
-                ) {
-                    let newDate = state.shop.map((value) =>
+                const existingProduct = state.shop.find(
+                    (value) => value.id === action.product.id
+                )
+
+                let updatedShop
+                if (existingProduct) {
+                    updatedShop = state.shop.map((value) =>
                         value.id === action.product.id
                             ? {...value, counter: value.counter + 1}
                             : value
                     )
-                    localStorage.setItem("shop", JSON.stringify(newDate))
-                    return {...state, shop: newDate}
+                } else {
+                    updatedShop = [
+                        ...state.shop,
+                        {...action.product, counter: 1},
+                    ]
                 }
-                let newDate = {
-                    ...state,
-                    shop: [...state.shop, {...action.product, counter: 1}],
-                }
-                localStorage.setItem("shop", JSON.stringify(newDate.shop))
-                return newDate
+
+                localStorage.setItem("shop", JSON.stringify(updatedShop))
+                return {...state, shop: updatedShop}
 
             case "delete":
-                let deletedData = state.shop.filter(
+                const updatedShopAfterDelete = state.shop.filter(
                     (value) => value.id !== action.deletedId
                 )
-                localStorage.setItem("shop", JSON.stringify(deletedData))
-                return {...state, shop: deletedData}
+                localStorage.setItem(
+                    "shop",
+                    JSON.stringify(updatedShopAfterDelete)
+                )
+                return {...state, shop: updatedShopAfterDelete}
 
             case "increment":
-                let incData = state.shop.map((value) =>
+                const incData = state.shop.map((value) =>
                     value.id === action.productId
                         ? {...value, counter: value.counter + 1}
                         : value
@@ -46,7 +52,7 @@ const ShopContextProvider = ({children}) => {
                 return {...state, shop: incData}
 
             case "decrement":
-                let decData = state.shop.map((value) =>
+                const decData = state.shop.map((value) =>
                     value.id === action.productId && value.counter > 1
                         ? {...value, counter: value.counter - 1}
                         : value
@@ -55,29 +61,25 @@ const ShopContextProvider = ({children}) => {
                 return {...state, shop: decData}
 
             case "like":
-                if (
-                    state.like.find((value) => value.id === action.product.id)
-                ) {
-                    let likedData = state.like.map((value) =>
-                        value.id === action.product.id
-                            ? {...value, counter: value.counter + 1}
-                            : value
-                    )
-                    localStorage.setItem("like", JSON.stringify(likedData))
-                    return {...state, like: likedData}
-                }
-                let likedData = {
-                    ...state,
-                    like: [...state.like, {...action.product, counter: 1}],
-                }
-                localStorage.setItem("like", JSON.stringify(likedData.like))
-                return likedData
-            case "disLike":
-                let disLikedData = state.like.filter(
-                    (value) => value.id !== action.deletedId
+                const isLiked = state.like.some(
+                    (item) => item.id === action.product.id
                 )
-                localStorage.setItem("like", JSON.stringify(disLikedData))
-                return {...state, like: disLikedData}
+                const updatedLikes = isLiked
+                    ? state.like.filter((item) => item.id !== action.product.id)
+                    : [...state.like, action.product]
+
+                localStorage.setItem("like", JSON.stringify(updatedLikes))
+                return {...state, like: updatedLikes}
+
+            case "disLike":
+                const updatedLikesAfterRemove = state.like.filter(
+                    (item) => item.id !== action.deletedId
+                )
+                localStorage.setItem(
+                    "like",
+                    JSON.stringify(updatedLikesAfterRemove)
+                )
+                return {...state, like: updatedLikesAfterRemove}
 
             default:
                 return state

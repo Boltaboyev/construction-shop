@@ -1,15 +1,19 @@
 import React, {useEffect, useState} from "react"
 import {Pagination, Slider} from "antd"
+
 import my_axios from "../../hook/useAxios"
 import CardItem from "../../components/card-item"
+import SkeletonLoader from "../../components/skeleton-loader"
 
 const ProductPage = () => {
     const [allProducts, setAllProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
     const [products, setProducts] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [maxPrice, setMaxPrice] = useState(30000)
-    const [filterPrice, setFilterPrice] = useState([0, 30000])
+    const [maxPrice, setMaxPrice] = useState(100000)
+    const [minPrice, setMinPrice] = useState(0)
+    const [filterPrice, setFilterPrice] = useState([0, 0])
+    const [loading, setLoading] = useState(true)
     const pageSize = 20
 
     useEffect(() => {
@@ -18,15 +22,17 @@ const ProductPage = () => {
             .then((res) => {
                 setAllProducts(res.data)
 
-                const highestPrice = Math.max(
-                    ...res.data.map((item) => item.price)
-                )
-                setMaxPrice(highestPrice)
+                const prices = res.data.map((item) => item.price)
+                const lowestPrice = Math.min(...prices)
+                const highestPrice = Math.max(...prices)
 
-                setFilterPrice([0, highestPrice])
+                setMinPrice(lowestPrice)
+                setMaxPrice(highestPrice)
+                setFilterPrice([lowestPrice, highestPrice])
                 setFilteredProducts(res.data)
             })
             .catch((error) => console.error(error))
+            .finally(() => setLoading(false))
     }, [])
 
     useEffect(() => {
@@ -57,7 +63,7 @@ const ProductPage = () => {
                 </div>
                 <Slider
                     range
-                    min={0}
+                    min={minPrice}
                     max={maxPrice}
                     value={filterPrice}
                     onChange={(value) => setFilterPrice(value)}
@@ -65,19 +71,25 @@ const ProductPage = () => {
             </div>
 
             <div className="grid grid-cols-4 gap-[20px] max-[1100px]:grid-cols-3 max-[800px]:grid-cols-2 max-[475px]:grid-cols-1">
-                {products.map((item) => (
-                    <CardItem key={item.id} {...item} />
-                ))}
+                {loading
+                    ? [...Array(8)].map((_, index) => (
+                          <SkeletonLoader key={index} />
+                      ))
+                    : products.map((item) => (
+                          <CardItem key={item.id} {...item} />
+                      ))}
             </div>
 
-            <div className="flex justify-end mt-4">
-                <Pagination
-                    current={currentPage}
-                    pageSize={pageSize}
-                    total={filteredProducts.length}
-                    onChange={(page) => setCurrentPage(page)}
-                />
-            </div>
+            {!loading && (
+                <div className="flex justify-end mt-4">
+                    <Pagination
+                        current={currentPage}
+                        pageSize={pageSize}
+                        total={filteredProducts.length}
+                        onChange={(page) => setCurrentPage(page)}
+                    />
+                </div>
+            )}
         </section>
     )
 }

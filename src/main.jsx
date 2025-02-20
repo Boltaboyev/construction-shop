@@ -1,18 +1,31 @@
 import {StrictMode} from "react"
 import {createRoot} from "react-dom/client"
 import {RouterProvider} from "react-router-dom"
-import {ToastContainer} from "react-toastify"
+import {ToastContainer, Zoom} from "react-toastify"
 
-import {MainContextProvider} from "./context/mainContext"
+import {ShopContextProvider} from "./context/shopContext"
 import {router} from "./routes"
 
 import "./index.css"
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <MainContextProvider>
+        <ShopContextProvider>
             <RouterProvider router={router}></RouterProvider>
-            <ToastContainer />
-        </MainContextProvider>
+            <ToastContainer
+                position="top-center"
+                autoClose={800}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                limit={4}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition={Zoom}
+            />
+        </ShopContextProvider>
     </StrictMode>
 )

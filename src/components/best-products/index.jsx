@@ -5,27 +5,21 @@ import {Swiper, SwiperSlide} from "swiper/react"
 import {Autoplay} from "swiper/modules"
 
 import CardItem from "../card-item"
+import SkeletonLoader from "../skeleton-loader"
 import my_axios from "../../hook/useAxios"
 
 // icon
-import {Segmented, Tabs} from "antd"
+import {Tabs} from "antd"
 
 const BestProducts = () => {
     const items = [
-        {
-            key: "1",
-            label: "Все товары",
-        },
-        {
-            key: "2",
-            label: "Инструменты",
-        },
-        {
-            key: "3",
-            label: "Сантехника",
-        },
+        {key: "1", label: "Все товары"},
+        {key: "2", label: "Инструменты"},
+        {key: "3", label: "Сантехника"},
     ]
+
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         my_axios
@@ -35,6 +29,7 @@ const BestProducts = () => {
                 setProducts(filteredProducts)
             })
             .catch((error) => console.error(error))
+            .finally(() => setLoading(false)) 
     }, [])
 
     return (
@@ -51,11 +46,17 @@ const BestProducts = () => {
                         800: {slidesPerView: 3, spaceBetween: 10},
                         1195: {slidesPerView: 4, spaceBetween: 10},
                     }}>
-                    {products.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <CardItem {...item} />
-                        </SwiperSlide>
-                    ))}
+                    {loading
+                        ? [...Array(4)].map((_, index) => (
+                              <SwiperSlide key={index}>
+                                  <SkeletonLoader />
+                              </SwiperSlide>
+                          ))
+                        : products.map((item) => (
+                              <SwiperSlide key={item.id}>
+                                  <CardItem {...item} />
+                              </SwiperSlide>
+                          ))}
                 </Swiper>
             </div>
         </section>
