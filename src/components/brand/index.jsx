@@ -4,14 +4,14 @@ import "swiper/css/pagination"
 import {Swiper, SwiperSlide} from "swiper/react"
 import {Autoplay} from "swiper/modules"
 
-import img1 from "../../shared/assets/img/Brand/1.png"
-import img2 from "../../shared/assets/img/Brand/2.png"
-import img3 from "../../shared/assets/img/Brand/3.png"
-import img4 from "../../shared/assets/img/Brand/4.png"
-import img5 from "../../shared/assets/img/Brand/5.png"
-import img6 from "../../shared/assets/img/Brand/6.png"
-import img7 from "../../shared/assets/img/Brand/7.png"
-import img8 from "../../shared/assets/img/Brand/8.png"
+import img1 from "../../shared/assets/img/brand/1.png"
+import img2 from "../../shared/assets/img/brand/2.png"
+import img3 from "../../shared/assets/img/brand/3.png"
+import img4 from "../../shared/assets/img/brand/4.png"
+import img5 from "../../shared/assets/img/brand/5.png"
+import img6 from "../../shared/assets/img/brand/6.png"
+import img7 from "../../shared/assets/img/brand/7.png"
+import img8 from "../../shared/assets/img/brand/8.png"
 
 const slides = [img1, img2, img3, img4, img5, img6, img7, img8]
 
