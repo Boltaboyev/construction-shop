@@ -1,9 +1,10 @@
 import React from "react"
-import {Table, Image} from "antd"
 import my_axios from "../../hook/useAxios"
+import {Table, Image} from "antd"
+import {EditOutlined, DeleteOutlined} from "@ant-design/icons"
 import {toast} from "react-toastify"
 
-const ProductTable = ({productData, fetchData}) => {
+const ProductTable = ({productData, fetchData, onEdit}) => {
     const handleDelete = async (id) => {
         try {
             await my_axios.delete(`/products/${id}`)
@@ -27,7 +28,7 @@ const ProductTable = ({productData, fetchData}) => {
                         alignItems: "center",
                         gap: "10px",
                     }}>
-                    <Image width={50} src={record.img} alt={text} />
+                    <Image width={40} height={40} src={record.img} alt={text} />
                     <span>{text}</span>
                 </div>
             ),
@@ -37,10 +38,18 @@ const ProductTable = ({productData, fetchData}) => {
         {title: "Discount", dataIndex: "discount", key: "discount"},
         {
             title: "Action",
-            dataIndex: "",
-            key: "x",
+            key: "action",
             render: (_, record) => (
-                <a onClick={() => handleDelete(record.id)}>Delete</a>
+                <div style={{display: "flex", gap: "10px"}}>
+                    <EditOutlined
+                        style={{color: "blue", cursor: "pointer"}}
+                        onClick={() => onEdit(record)}
+                    />
+                    <DeleteOutlined
+                        style={{color: "red", cursor: "pointer"}}
+                        onClick={() => handleDelete(record.id)}
+                    />
+                </div>
             ),
         },
     ]
@@ -49,7 +58,7 @@ const ProductTable = ({productData, fetchData}) => {
         <Table
             columns={columns}
             dataSource={[...productData].reverse()}
-            pagination={{pageSize: 6}}
+            pagination={{pageSize: 4}}
             rowKey="id"
         />
     )

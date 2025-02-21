@@ -1,12 +1,27 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import {UploadOutlined} from "@ant-design/icons"
 import {Button, Drawer, Form, Input, InputNumber, Select, Upload} from "antd"
 import my_axios from "../../hook/useAxios"
 import {toast} from "react-toastify"
 
-const FormModal = ({isModalOpen, setIsModalOpen, fetchData}) => {
+const FormModal = ({
+    isModalOpen,
+    setIsModalOpen,
+    fetchData,
+    selectedProduct,
+}) => {
     const [form] = Form.useForm()
     const [imageUrl, setImageUrl] = useState(null)
+
+    useEffect(() => {
+        if (selectedProduct) {
+            form.setFieldsValue(selectedProduct) // Ma'lumotlarni formga yuklash
+            setImageUrl(selectedProduct.img || null) // Rasmni yuklash
+        } else {
+            form.resetFields()
+            setImageUrl(null)
+        }
+    }, [selectedProduct, form])
 
     const handleImageChange = (info) => {
         const file = info.file.originFileObj
@@ -20,25 +35,31 @@ const FormModal = ({isModalOpen, setIsModalOpen, fetchData}) => {
         }
     }
 
-    const onFinish = (values) => {
-        my_axios
-            .post("/products", values)
-            .then(() => {
-                fetchData()
-                setIsModalOpen(false)
-                form.resetFields()
-                setImageUrl(null)
+    const onFinish = async (values) => {
+        try {
+            if (selectedProduct) {
+                // Agar mahsulot mavjud bo'lsa, yangilash
+                await my_axios.put(`/products/${selectedProduct.id}`, values)
+                toast.success("Product updated successfully!")
+            } else {
+                // Agar mahsulot yangi bo'lsa, qo'shish
+                await my_axios.post("/products", values)
                 toast.success("Product added successfully!")
-            })
-            .catch((error) => {
-                console.error("Error adding product:", error)
-                toast.error("Failed to add product")
-            })
+            }
+
+            fetchData()
+            setIsModalOpen(false)
+            form.resetFields()
+            setImageUrl(null)
+        } catch (error) {
+            console.error("Error saving product:", error)
+            toast.error("Failed to save product")
+        }
     }
 
     return (
         <Drawer
-            title="Add Product"
+            title={selectedProduct ? "Edit Product" : "Add Product"}
             onClose={() => {
                 setIsModalOpen(false)
                 form.resetFields()
@@ -63,8 +84,9 @@ const FormModal = ({isModalOpen, setIsModalOpen, fetchData}) => {
                                 alt="Uploaded"
                                 style={{
                                     maxWidth: "100%",
-                                    maxHeight: "150px",
+                                    maxHeight: "100px",
                                     borderRadius: "8px",
+                                    objectFit: "contain",
                                 }}
                             />
                         </div>
@@ -133,7 +155,7 @@ const FormModal = ({isModalOpen, setIsModalOpen, fetchData}) => {
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit" block>
-                        Add Product
+                        {selectedProduct ? "Update Product" : "Add Product"}
                     </Button>
                 </Form.Item>
             </Form>

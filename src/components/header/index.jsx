@@ -1,9 +1,10 @@
-import React, {useContext, useState} from "react"
+import React, {useCallback, useContext, useState} from "react"
 import {Link, NavLink, useNavigate} from "react-router-dom"
+import {debounce} from "lodash"
 
 import {ShopContext} from "../../context/shopContext"
+import my_axios from "../../hook/useAxios"
 
-// antd components
 import {Button} from "antd"
 
 // img
@@ -29,9 +30,40 @@ const Header = () => {
 
     const navigate = useNavigate()
 
+    const [searchQuery, setSearchQuery] = useState("")
+    const [searchResults, setSearchResults] = useState([])
+    const [loading, setLoading] = useState(false)
+
+    const fetchProducts = async (query) => {
+        if (!query.trim()) {
+            setSearchResults([])
+            return
+        }
+
+        setLoading(true)
+        try {
+            const {data} = await my_axios.get("/products")
+            const filteredResults = data.filter((product) =>
+                product.title.toLowerCase().includes(query.toLowerCase())
+            )
+            setSearchResults(filteredResults)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    const debouncedSearch = useCallback(debounce(fetchProducts, 500), [])
+
+    const handleSearch = (e) => {
+        const query = e.target.value
+        setSearchQuery(query)
+        debouncedSearch(query)
+    }
     return (
         <header>
-            {/* top navbar */}
+            {/* Top navbar */}
             <nav className="py-[7px] bg-white border-b border-[#ebeef0]">
                 <nav className="container2 flex justify-between items-center gap-[10px]">
                     <FiMenu
@@ -39,7 +71,7 @@ const Header = () => {
                         className="text-[20px] hidden max-[1050px]:block"
                     />
                     <ul
-                        className={` flex justify-center items-center gap-[18px] font-normal text-[12px] text-[#6c6f71] max-[1050px]:fixed max-[1050px]:h-screen max-[1050px]:bg-white max-[1050px]:w-[400px] max-[430px]:w-[90%] max-[1050px]:top-0 ${
+                        className={`flex justify-center items-center gap-[18px] font-normal text-[12px] text-[#6c6f71] max-[1050px]:fixed max-[1050px]:h-screen max-[1050px]:bg-white max-[1050px]:w-[400px] max-[430px]:w-[90%] max-[1050px]:top-0 ${
                             menuOpen
                                 ? "max-[1050px]:left-0"
                                 : "max-[1050px]:left-[-100%]"
@@ -52,7 +84,7 @@ const Header = () => {
                             className="absolute top-[20px] right-[20px] text-[20px] hidden max-[1050px]:block"
                         />
 
-                        <nav className=" gap-[10px] justify-start items-center cursor-pointer hidden max-[1050px]:flex border-b border-gray-200 w-full pb-[8px]">
+                        <nav className="gap-[10px] justify-start items-center cursor-pointer hidden max-[1050px]:flex border-b border-gray-200 w-full pb-[8px]">
                             <GoGift className="text-[22px]" />
                             <p className="font-normal text-[14px] leading-[57%] text-center text-[#6b7076] group-hover:text-[#186fd4] ownTransition select-none">
                                 Все акции
@@ -96,21 +128,21 @@ const Header = () => {
 
                         <a
                             href="tel:+8 800 444 00 65"
-                            className="font-medium text-[13px] text-black">
+                            className="font-medium text-[13px] text-black max-[290px]:text-[11px]">
                             8 800 444 00 65
                         </a>
 
                         <Button
                             color="primary"
                             variant="filled"
-                            className=" !font-bold !text-[10px] !uppercase !text-[#2a5e8d] !p-[6px_10px] !h-fit">
+                            className="!font-bold !text-[10px] !uppercase !text-[#2a5e8d] !p-[6px_10px] !h-fit">
                             Заказать звонок
                         </Button>
                     </nav>
                 </nav>
             </nav>
 
-            {/* bottom navbar */}
+            {/* Bottom navbar */}
             <nav className="py-[20px] bg-white max-[900px]:py-[13px]">
                 <nav className="container2 flex justify-between items-center gap-[10px]">
                     <Link to={"/"}>
@@ -129,18 +161,52 @@ const Header = () => {
                         Каталог
                     </Button>
 
-                    {/* search form */}
-                    <form className="flex justify-between items-center h-[42px] p-[2px] bg-[#186fd4] overflow-hidden rounded-[6px] w-[570px] max-[1315px]:w-[500px] max-[1235px]:w-[400px] max-[900px]:!hidden">
-                        <input
-                            className=" text-[12px] px-[10px] h-full w-full bg-white rounded-[4px] "
-                            type="text"
-                            placeholder="Найти среди 50000 товаров. Например: Дрель Bosch"
-                        />
+                    {/* Search form */}
+                    <div className="relative">
+                        <form className="flex justify-between items-center h-[42px] p-[2px] bg-[#186fd4] overflow-hidden rounded-[6px] w-[570px] max-[1315px]:w-[500px] max-[1235px]:w-[400px] max-[900px]:!hidden">
+                            <input
+                                className="text-[12px] px-[10px] h-full w-full bg-white rounded-[4px]"
+                                type="text"
+                                placeholder="Найти среди 50000 товаров. Например: Дрель Bosch"
+                                value={searchQuery}
+                                onChange={handleSearch}
+                            />
+                            <button className="text-white h-full px-[14px]">
+                                <FiSearch />
+                            </button>
+                        </form>
 
-                        <button className="text-white h-full px-[14px]">
-                            <FiSearch />
-                        </button>
-                    </form>
+                        {/* Search results */}
+                        {searchQuery && (
+                            <div className="absolute top-[50px] left-0 !w-full  !bg-white border border-gray-200 rounded-[6px] shadow-lg z-[777] max-[900px]:!hidden">
+                                {searchResults.length > 0 ? (
+                                    searchResults.map((product) => (
+                                        <div
+                                            key={product.id}
+                                            className="p-[10px] hover:bg-gray-100 cursor-pointer flex justify-start items-center gap-[10px]"
+                                            onClick={() => {
+                                                navigate(
+                                                    `/product/${product.id}`
+                                                )
+                                                setSearchQuery("")
+                                                setSearchResults([])
+                                            }}>
+                                            <img
+                                                src={product.img}
+                                                alt={product.title}
+                                                className="h-[30px] w-[30px] object-contain"
+                                            />
+                                            {product.title}
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="p-[10px] text-gray-500">
+                                        Ничего не найдено
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
 
                     <nav className="flex justify-center items-center gap-[22px] max-[315px]:gap-[14px]">
                         <nav className="flex flex-col gap-[10px] justify-center items-center cursor-pointer hover:text-[#186fd4] group ownTransition max-[1050px]:hidden">
@@ -149,23 +215,20 @@ const Header = () => {
                                 Все акции
                             </p>
                         </nav>
-
                         <NavLink
                             to={"/login"}
                             className="flex flex-col gap-[10px] justify-center items-center cursor-pointer hover:text-[#186fd4] group ownTransition">
-                            <TbUserSquareRounded className="text-[22px]" />
+                            <TbUserSquareRounded className="text-[22px] max-[1130px]:text-[25px]" />
                             <p className="font-normal text-[12px] leading-[57%] text-center text-[#6b7076] group-hover:text-[#186fd4] ownTransition select-none max-[1130px]:hidden">
                                 Войти
                             </p>
                         </NavLink>
-
-                        <nav className="flex flex-col gap-[10px] justify-center items-center cursor-pointer hover:text-[#186fd4] group ownTransition">
+                        <nav className="flex flex-col gap-[10px] justify-center items-center cursor-pointer hover:text-[#186fd4] group ownTransition max-[400px]:hidden">
                             <HiMenuAlt2 className="text-[22px] rotate-[-90deg]" />
                             <p className="font-normal text-[12px] leading-[57%] text-center text-[#6b7076] group-hover:text-[#186fd4] ownTransition select-none max-[1130px]:hidden">
                                 Сравнение
                             </p>
                         </nav>
-
                         <NavLink
                             to={"/like"}
                             className="relative flex flex-col gap-[10px] justify-center items-center cursor-pointer hover:text-[#186fd4] group ownTransition">
@@ -175,14 +238,13 @@ const Header = () => {
                             </p>
 
                             {state.like.length ? (
-                                <div className="w-4 h-4 !text-white flex justify-center items-center absolute p-[2px] text-[10px] rounded-full bg-red-500  -top-1 right-[13px]">
+                                <div className="w-4 h-4 !text-white flex justify-center items-center absolute p-[2px] text-[10px] rounded-full bg-red-500  -top-1 right-[13px] max-[1130px]:right-[-6px]">
                                     {state.like.length}
                                 </div>
                             ) : (
                                 ""
                             )}
                         </NavLink>
-
                         <NavLink
                             to={"/shop"}
                             className="relative flex flex-col gap-[10px] justify-center items-center cursor-pointer hover:text-[#186fd4] group ownTransition">
@@ -202,7 +264,7 @@ const Header = () => {
                             </p>
 
                             {state.shop.length ? (
-                                <div className="w-4 h-4 flex justify-center items-center absolute p-[2px] text-[10px] rounded-full bg-red-500 !text-white -top-1 right-[5px]">
+                                <div className="w-4 h-4 flex justify-center items-center absolute p-[2px] text-[10px] rounded-full bg-red-500 !text-white -top-1 right-[5px] max-[1130px]:right-[-6px]">
                                     {state.shop.length}
                                 </div>
                             ) : (
@@ -222,30 +284,63 @@ const Header = () => {
                         <TbMenu className="text-[17px]" />
                         Каталог
                     </Button>
-                    {/* search form */}
+                    {/* Search form */}
                     <form className="hidden justify-between items-center h-[35px] p-[2px] bg-[#186fd4] overflow-hidden rounded-[6px] w-[570px] max-[1315px]:w-[500px] max-[1235px]:w-[400px] max-[900px]:!flex max-[550px]:!hidden">
                         <input
-                            className=" text-[12px] px-[10px] h-full w-full bg-white rounded-[4px] "
+                            className="text-[12px] px-[10px] h-full w-full bg-white rounded-[4px]"
                             type="text"
                             placeholder="Найти среди 50000 товаров. Например: Дрель Bosch"
+                            value={searchQuery}
+                            onChange={handleSearch}
                         />
-
                         <button className="text-white h-full px-[14px]">
                             <FiSearch />
                         </button>
                     </form>
 
-                    <form className="hidden justify-between items-center h-[35px] p-[2px] bg-[#186fd4] overflow-hidden rounded-[6px] w-[570px] max-[1315px]:w-[500px] max-[1235px]:w-[400px] max-[550px]:!flex">
+                    <form className="hidden justify-between items-center h-[35px] p-[2px] bg-[#186fd4] overflow-hidden rounded-[6px] w-full max-[550px]:!flex">
                         <input
-                            className=" text-[12px] px-[10px] h-full w-full bg-white rounded-[4px] "
+                            className="text-[12px] px-[10px] h-full w-full bg-white rounded-[4px]"
                             type="text"
                             placeholder="Поиск..."
+                            value={searchQuery}
+                            onChange={handleSearch}
                         />
-
                         <button className="text-white h-full px-[14px]">
                             <FiSearch />
                         </button>
                     </form>
+
+                    {/* Search results */}
+                    {searchQuery && (
+                        <div className="absolute top-[165px] max-[370px]:top-[155px] w-[90%] left-[5%] !bg-white border border-gray-200 rounded-[6px] shadow-lg z-[777] hidden max-[550px]:!block">
+                            {searchResults.length > 0 ? (
+                                searchResults.map((product) => (
+                                    <div
+                                        key={product.id}
+                                        className="p-[10px] hover:bg-gray-100 cursor-pointer flex justify-start items-center gap-[10px] max-[390px]:p-[5px] max-[390px]:border-b border-gray-200"
+                                        onClick={() => {
+                                            navigate(`/product/${product.id}`)
+                                            setSearchQuery("")
+                                            setSearchResults([])
+                                        }}>
+                                        <img
+                                            src={product.img}
+                                            alt={product.title}
+                                            className="h-[30px] w-[30px] object-contain max-[390px]:hidden"
+                                        />
+                                        <p className="text-[12px] max-[390px]:text-[11px]">
+                                            {product.title}
+                                        </p>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="p-[10px] text-gray-500 w-full ">
+                                    Ничего не найдено
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </nav>
             </nav>
 

@@ -10,6 +10,7 @@ import {Button, Tabs} from "antd"
 import {BsBoxSeam} from "react-icons/bs"
 import {FaListUl, FaCheck} from "react-icons/fa"
 import {CiCreditCard1, CiPercent} from "react-icons/ci"
+import { toast } from "react-toastify"
 
 const ProductDetail = () => {
     const {dispatch} = useContext(ShopContext)
@@ -201,23 +202,25 @@ const ProductDetail = () => {
                         </div>
 
                         <Button
-                            onClick={() =>
+                            onClick={() => {
                                 dispatch({
                                     type: "add",
                                     product: product,
-                                })
-                            }
+                                }),
+                                    toast.success("Товар добавлен в корзину")
+                            }}
                             type="primary"
                             className="!h-[40px] !w-full">
                             Добавить в корзину
                         </Button>
                         <Button
-                            onClick={() =>
+                            onClick={() => {
                                 dispatch({
                                     type: "add",
                                     product: product,
-                                })
-                            }
+                                }),
+                                    toast.success("Товар добавлен в корзину")
+                            }}
                             color="primary"
                             variant="filled"
                             className="!h-[40px] !w-full">

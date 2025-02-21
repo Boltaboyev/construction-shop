@@ -18,11 +18,19 @@ import {useNavigate} from "react-router-dom"
 
 const {Header, Sider, Content} = Layout
 
+const siderStyle = {
+    position: "sticky",
+    top: 0,
+    height: "100vh",
+    overflow: "auto",
+}
+
 const AdminDashboard = () => {
     const [collapsed, setCollapsed] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [productData, setProductData] = useState([])
     const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false)
+    const [selectedProduct, setSelectedProduct] = useState(null)
 
     const {
         token: {colorBgContainer, borderRadiusLG},
@@ -42,60 +50,57 @@ const AdminDashboard = () => {
     }, [])
 
     const navigate = useNavigate()
+
     const logout = () => {
         localStorage.removeItem("user")
         navigate("/")
     }
 
+    const handleEdit = (product) => {
+        setSelectedProduct(product)
+        setIsModalOpen(true)
+    }
+
     return (
-        <Layout className=" h-screen">
+        <Layout style={{minHeight: "100vh", overflow: "hidden"}}>
             <Sider
                 trigger={null}
                 collapsible
                 collapsed={collapsed}
-                className="!sticky !top-0">
-                <div className="h-screen flex flex-col justify-between select-none !sticky !top-0">
-                    <Menu
-                        className="!p-[10px_0] !sticky !top-0 !z-50"
-                        theme="light"
-                        mode="inline"
-                        defaultSelectedKeys={["3"]}
-                        items={[
-                            {
-                                key: "1",
-                                icon: <RxDashboard className="!text-[20px]" />,
-                                label: "Dashboard",
-                            },
-                            {
-                                key: "2",
-                                icon: (
-                                    <LuShoppingCart className="!text-[20px]" />
-                                ),
-                                label: "Orders",
-                            },
-                            {
-                                key: "3",
-                                icon: <LuPackage className="!text-[20px]" />,
-                                label: "Products",
-                            },
-                            {
-                                key: "4",
-                                icon: <BiGroup className="!text-[20px]" />,
-                                label: "Customers",
-                            },
-                            {
-                                key: "5",
-                                icon: <BsGraphUp className="!text-[18px]" />,
-                                label: "Analytics",
-                            },
-                        ]}
-                    />
-                    <Menu
-                        className="!p-[10px_0] h-screen flex flex-col justify-end select-none !sticky !bottom-0"
-                        theme="light"
-                        mode="inline"
-                    />
-                </div>
+                style={siderStyle}>
+                <Menu
+                    className="!h-screen"
+                    theme="dark"
+                    mode="inline"
+                    defaultSelectedKeys={["3"]}
+                    items={[
+                        {
+                            key: "1",
+                            icon: <RxDashboard className="!text-[20px]" />,
+                            label: "Dashboard",
+                        },
+                        {
+                            key: "2",
+                            icon: <LuShoppingCart className="!text-[20px]" />,
+                            label: "Orders",
+                        },
+                        {
+                            key: "3",
+                            icon: <LuPackage className="!text-[20px]" />,
+                            label: "Products",
+                        },
+                        {
+                            key: "4",
+                            icon: <BiGroup className="!text-[20px]" />,
+                            label: "Customers",
+                        },
+                        {
+                            key: "5",
+                            icon: <BsGraphUp className="!text-[18px]" />,
+                            label: "Analytics",
+                        },
+                    ]}
+                />
             </Sider>
 
             <Layout>
@@ -112,22 +117,16 @@ const AdminDashboard = () => {
                             )
                         }
                         onClick={() => setCollapsed(!collapsed)}
-                        style={{
-                            fontSize: "20px",
-                            width: 64,
-                            height: 64,
-                        }}
+                        style={{fontSize: "20px", width: 64, height: 64}}
                     />
-
                     <div className="flex justify-center items-center gap-[10px]">
                         <Button
                             shape="circle"
                             size="large"
                             icon={<UserOutlined className="opacity-60" />}
                         />
-
                         <Button
-                            onClick={() => setIsLogoutModalOpen(true)} // Open logout confirm modal
+                            onClick={() => setIsLogoutModalOpen(true)}
                             shape="circle"
                             size="large"
                             icon={<LogoutOutlined className="opacity-60" />}
@@ -140,12 +139,14 @@ const AdminDashboard = () => {
                         size="large"
                         options={["All", "Active", "Draft", "Archived"]}
                     />
-
                     <Button
                         className="w-[150px] !font-medium !bg-[#0f172a]"
                         type="primary"
                         icon={<PlusCircleOutlined />}
-                        onClick={() => setIsModalOpen(true)}>
+                        onClick={() => {
+                            setSelectedProduct(null)
+                            setIsModalOpen(true)
+                        }}>
                         Add product
                     </Button>
                 </div>
@@ -161,6 +162,7 @@ const AdminDashboard = () => {
                     <ProductTable
                         productData={productData}
                         fetchData={fetchData}
+                        onEdit={handleEdit}
                     />
                 </Content>
             </Layout>
@@ -169,6 +171,8 @@ const AdminDashboard = () => {
                 isModalOpen={isModalOpen}
                 setIsModalOpen={setIsModalOpen}
                 fetchData={fetchData}
+                selectedProduct={selectedProduct}
+                setSelectedProduct={setSelectedProduct}
             />
 
             <Modal
