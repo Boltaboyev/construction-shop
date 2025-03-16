@@ -1,3 +1,4 @@
 # Admin Dashboard
 
-- login
+- email: admin@mail.ru
+- password: 123123
