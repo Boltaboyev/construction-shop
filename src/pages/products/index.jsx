@@ -20,7 +20,7 @@ const ProductPage = () => {
         my_axios
             .get("/products")
             .then((res) => {
-                setAllProducts(res.data)
+                setAllProducts(res.data.reverse())
 
                 const prices = res.data.map((item) => item.price)
                 const lowestPrice = Math.min(...prices)
